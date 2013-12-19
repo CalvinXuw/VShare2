@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/background_listitem_nor" >
+
+    <LinearLayout
+        android:id="@+id/layout_item"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <!-- section样式 蓝色 -->
+
+        <LinearLayout
+            android:id="@+id/layout_item_location_section"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:layout_marginBottom="-15dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <View
+                android:layout_width="5dip"
+                android:layout_height="20dip"
+                android:background="@color/section_split" />
+
+            <TextView
+                android:id="@+id/text_item_location_section"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dip"
+                android:textColor="@color/font_location_section"
+                android:textSize="@dimen/font_list_subtitle"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="8dip"
+                android:background="@color/section_split" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_item_location_item"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:background="@drawable/background_listitem"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dip" >
+
+            <View
+                android:id="@+id/image_item_location_tag"
+                android:layout_width="12dip"
+                android:layout_height="17dip"
+                android:layout_marginRight="5dip"
+                android:background="@drawable/image_location_tag" />
+
+            <TextView
+                android:id="@+id/text_item_location_province"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/font_list_desc"
+                android:textSize="@dimen/font_list_subtitle" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:background="@color/divider" />
+
+</RelativeLayout>

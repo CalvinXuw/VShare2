@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/background_listitem_nor"
+    android:orientation="vertical"
+    android:padding="15dip" >
+
+    <ImageView
+        android:id="@+id/image_about_icon"
+        android:layout_width="60dip"
+        android:layout_height="60dip"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dip"
+        android:background="@drawable/image_about_icon" />
+
+    <TextView
+        android:id="@+id/text_about_appname"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image_about_icon"
+        android:gravity="center"
+        android:textColor="@color/font_list_title"
+        android:textSize="@dimen/font_list_title" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_about_appname"
+        android:layout_marginTop="20dip"
+        android:lineSpacingExtra="3dip"
+        android:text="@string/about_content"
+        android:textColor="@color/font_list_desc"
+        android:textSize="@dimen/font_list_subtitle" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dip"
+            android:gravity="center"
+            android:text="@string/about_copyright_cn"
+            android:textColor="@color/font_about"
+            android:textSize="@dimen/font_list_desc_little" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/about_copyright_en"
+            android:textColor="@color/font_about"
+            android:textSize="@dimen/font_list_desc_little" />
+    </LinearLayout>
+
+</RelativeLayout>

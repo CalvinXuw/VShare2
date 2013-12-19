@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background_listitem_nor"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:gravity="center"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip" >
+
+        <Button
+            android:id="@+id/btn_foot_call"
+            android:layout_width="fill_parent"
+            android:layout_height="35dip"
+            android:background="@drawable/btn_blue"
+            android:text="@string/club_call_10086"
+            android:textColor="@color/font_list_cover"
+            android:textSize="@dimen/font_list_subtitle" >
+        </Button>
+    </LinearLayout>
+
+</LinearLayout>

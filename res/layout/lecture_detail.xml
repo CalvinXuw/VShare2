@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_listitem"
+    android:orientation="vertical" >
+
+    <!-- 加一个状态view -->
+
+    <include layout="@layout/include_stateview" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- 大讲堂顶部区域，缩略图以及动作按钮 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="10dip"
+                android:gravity="center_vertical" >
+
+                <!-- 缩略图 -->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/layout_lecture_detail_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_discount_rectangle"
+                        android:padding="2dip" >
+
+                        <ImageView
+                            android:id="@+id/image_lecture_detail"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:scaleType="fitXY" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="6dip"
+                        android:background="@drawable/image_shadow_lecture_icon" />
+                </LinearLayout>
+
+                <!-- 控制区域，跳转按钮，讲堂名称 -->
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="10dip"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/text_lecture_title"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:textColor="@color/font_list_title"
+                        android:textSize="@dimen/font_list_title"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="35dip"
+                        android:layout_alignParentBottom="true"
+                        android:layout_below="@+id/text_lecture_title"
+                        android:layout_marginBottom="6dip"
+                        android:layout_marginTop="10dip"
+                        android:gravity="bottom"
+                        android:weightSum="2" >
+
+                        <Button
+                            android:id="@+id/btn_lecture_top_left"
+                            android:layout_width="0dip"
+                            android:layout_height="35dip"
+                            android:layout_marginRight="5dip"
+                            android:layout_weight="1"
+                            android:background="@drawable/btn_orange"
+                            android:textColor="@color/font_list_cover"
+                            android:textSize="@dimen/font_list_subtitle" />
+
+                        <Button
+                            android:id="@+id/btn_lecture_top_right"
+                            android:layout_width="0dip"
+                            android:layout_height="35dip"
+                            android:layout_marginLeft="5dip"
+                            android:layout_weight="1"
+                            android:background="@drawable/btn_blue"
+                            android:textColor="@color/font_list_cover"
+                            android:textSize="@dimen/font_list_subtitle" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!-- 活动介绍 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="5dip" >
+
+                <View
+                    android:layout_width="5dip"
+                    android:layout_height="20dip"
+                    android:background="@color/section_split" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dip"
+                    android:text="@string/section_lecture_introduce_activity"
+                    android:textColor="@color/font_location_section"
+                    android:textSize="@dimen/font_list_subtitle"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="8dip"
+                    android:background="@color/section_split" />
+            </LinearLayout>
+
+            <!-- 时间 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:gravity="center_vertical" >
+
+                <View
+                    android:layout_width="17dip"
+                    android:layout_height="17dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@drawable/image_club_time" />
+
+                <TextView
+                    android:id="@+id/text_lecture_time"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/font_list_tag"
+                    android:textSize="@dimen/font_club_info_little" />
+            </LinearLayout>
+
+            <!-- 地点 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:gravity="center_vertical" >
+
+                <View
+                    android:layout_width="17dip"
+                    android:layout_height="17dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@drawable/image_club_location" />
+
+                <TextView
+                    android:id="@+id/text_lecture_location"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/font_list_tag"
+                    android:textSize="@dimen/font_club_info_little" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_lecture_introduce_activity"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:textColor="@color/font_list_desc"
+                android:textSize="@dimen/font_list_subtitle" />
+
+            <!-- 嘉宾介绍 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="5dip" >
+
+                <View
+                    android:layout_width="5dip"
+                    android:layout_height="20dip"
+                    android:background="@color/section_split" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dip"
+                    android:text="@string/section_lecture_introduce_guest"
+                    android:textColor="@color/font_location_section"
+                    android:textSize="@dimen/font_list_subtitle"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="8dip"
+                    android:background="@color/section_split" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_lecture_introduce_guest"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:textColor="@color/font_list_desc"
+                android:textSize="@dimen/font_list_subtitle" />
+
+            <!-- 活动图片 -->
+
+            <LinearLayout
+                android:id="@+id/layout_lecture_activity"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dip"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingTop="5dip" >
+
+                    <View
+                        android:layout_width="5dip"
+                        android:layout_height="20dip"
+                        android:background="@color/section_split" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="5dip"
+                        android:text="@string/section_lecture_acitivty_photo"
+                        android:textColor="@color/font_location_section"
+                        android:textSize="@dimen/font_list_subtitle"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="2dip"
+                        android:layout_marginLeft="5dip"
+                        android:layout_marginRight="10dip"
+                        android:layout_marginTop="8dip"
+                        android:background="@color/section_split" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:weightSum="3" >
+
+                    <RelativeLayout
+                        android:layout_width="0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="5dip"
+                        android:layout_weight="1.0" >
+
+                        <ImageView
+                            android:id="@+id/image_lecture_activity_left"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_marginBottom="10dip"
+                            android:background="@drawable/background_discount_rectangle"
+                            android:padding="2dip"
+                            android:scaleType="fitXY" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="4dip"
+                            android:layout_below="@+id/image_lecture_activity_left"
+                            android:layout_marginTop="-11dip"
+                            android:background="@drawable/image_shadow_lecture_summary" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="5dip"
+                        android:layout_marginRight="5dip"
+                        android:layout_weight="1.0" >
+
+                        <ImageView
+                            android:id="@+id/image_lecture_activity_middle"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_marginBottom="10dip"
+                            android:background="@drawable/background_discount_rectangle"
+                            android:padding="2dip"
+                            android:scaleType="fitXY" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="4dip"
+                            android:layout_below="@+id/image_lecture_activity_middle"
+                            android:layout_marginTop="-11dip"
+                            android:background="@drawable/image_shadow_lecture_summary" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="5dip"
+                        android:layout_weight="1.0" >
+
+                        <ImageView
+                            android:id="@+id/image_lecture_activity_right"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_marginBottom="10dip"
+                            android:background="@drawable/background_discount_rectangle"
+                            android:padding="2dip"
+                            android:scaleType="fitXY" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="4dip"
+                            android:layout_below="@+id/image_lecture_activity_right"
+                            android:layout_marginTop="-11dip"
+                            android:background="@drawable/image_shadow_lecture_summary" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

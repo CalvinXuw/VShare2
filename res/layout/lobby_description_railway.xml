@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <!-- 服务内容 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dip"
+        android:layout_marginBottom="-10dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <View
+            android:layout_width="5dip"
+            android:layout_height="20dip"
+            android:background="@color/section_split" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dip"
+            android:text="@string/lobby_detail_content"
+            android:textColor="@color/font_location_section"
+            android:textSize="@dimen/font_list_subtitle"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="8dip"
+            android:background="@color/section_split" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingMultiplier="1.2"
+        android:padding="10dip"
+        android:text="@string/lobby_detail_content_railway"
+        android:textColor="@color/font_list_desc"
+        android:textSize="@dimen/font_list_subtitle" />
+
+    <!-- 服务对象 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="25dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <View
+            android:layout_width="5dip"
+            android:layout_height="20dip"
+            android:background="@color/section_split" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dip"
+            android:text="@string/lobby_detail_target"
+            android:textColor="@color/font_location_section"
+            android:textSize="@dimen/font_list_subtitle"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="8dip"
+            android:background="@color/section_split" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingMultiplier="1.2"
+        android:padding="10dip"
+        android:text="@string/lobby_detail_target_railway"
+        android:textColor="@color/font_list_desc"
+        android:textSize="@dimen/font_list_subtitle" />
+
+    <!-- 服务标准 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="25dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <View
+            android:layout_width="5dip"
+            android:layout_height="20dip"
+            android:background="@color/section_split" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dip"
+            android:text="@string/lobby_detail_standard"
+            android:textColor="@color/font_location_section"
+            android:textSize="@dimen/font_list_subtitle"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="8dip"
+            android:background="@color/section_split" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingMultiplier="1.2"
+        android:padding="10dip"
+        android:text="@string/lobby_detail_standard_railway"
+        android:textColor="@color/font_list_desc"
+        android:textSize="@dimen/font_list_subtitle" />
+
+    <!-- 服务受理方式 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="25dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <View
+            android:layout_width="5dip"
+            android:layout_height="20dip"
+            android:background="@color/section_split" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dip"
+            android:text="@string/lobby_detail_acceptway"
+            android:textColor="@color/font_location_section"
+            android:textSize="@dimen/font_list_subtitle"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="8dip"
+            android:background="@color/section_split" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingMultiplier="1.2"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingTop="10dip"
+        android:text="@string/lobby_detail_acceptway_railway"
+        android:textColor="@color/font_list_desc"
+        android:textSize="@dimen/font_list_subtitle" />
+
+</LinearLayout>

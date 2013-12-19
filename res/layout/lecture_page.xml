@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_listitem"
+    android:orientation="vertical" >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="40dip" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="55dip"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip" >
+
+        <TextView
+            android:id="@+id/id_lecture_pagecount"
+            android:layout_width="45dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:textColor="@color/font_list_tag"
+            android:textSize="@dimen/font_list_tag" />
+
+        <com.ifeng.util.ui.PageIndexView
+            android:id="@+id/pageindex"
+            android:layout_width="fill_parent"
+            android:layout_height="55dip"
+            android:layout_toLeftOf="@+id/text_lecture_pagecount"
+            android:layout_toRightOf="@+id/id_lecture_pagecount" />
+
+        <TextView
+            android:id="@+id/text_lecture_pagecount"
+            android:layout_width="45dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:textColor="@color/font_list_tag"
+            android:textSize="@dimen/font_list_tag" />
+    </RelativeLayout>
+
+</RelativeLayout>

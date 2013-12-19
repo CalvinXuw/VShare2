@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_listitem"
+    android:orientation="vertical"
+    android:paddingLeft="10dip"
+    android:paddingRight="10dip" >
+
+    <TextView
+        android:id="@+id/text_item_image_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dip"
+        android:layout_marginTop="10dip"
+        android:textColor="@color/font_list_title"
+        android:textSize="@dimen/font_list_title" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dip" >
+
+        <TextView
+            android:id="@+id/text_item_image_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/font_list_tag"
+            android:textSize="@dimen/font_list_tag" />
+
+        <TextView
+            android:id="@+id/text_item_image_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/font_list_tag"
+            android:textSize="@dimen/font_list_tag" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_item_image_three"
+        android:layout_width="fill_parent"
+        android:layout_height="75dip"
+        android:layout_marginBottom="5dip"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="5dip"
+            android:layout_weight="1.0" >
+
+            <ImageView
+                android:id="@+id/image_item_image_three_image1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="10dip"
+                android:background="@drawable/background_discount_rectangle"
+                android:padding="2dip"
+                android:scaleType="fitXY" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="4dip"
+                android:layout_below="@+id/image_item_image_three_image1"
+                android:layout_marginTop="-11dip"
+                android:background="@drawable/image_shadow_lecture_summary" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_weight="1.0" >
+
+            <ImageView
+                android:id="@+id/image_item_image_three_image2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="10dip"
+                android:background="@drawable/background_discount_rectangle"
+                android:padding="2dip"
+                android:scaleType="fitXY" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="4dip"
+                android:layout_below="@+id/image_item_image_three_image2"
+                android:layout_marginTop="-11dip"
+                android:background="@drawable/image_shadow_lecture_summary" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5dip"
+            android:layout_weight="1.0" >
+
+            <ImageView
+                android:id="@+id/image_item_image_three_image3"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="10dip"
+                android:background="@drawable/background_discount_rectangle"
+                android:padding="2dip"
+                android:scaleType="fitXY" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="4dip"
+                android:layout_below="@+id/image_item_image_three_image3"
+                android:layout_marginTop="-11dip"
+                android:background="@drawable/image_shadow_lecture_summary" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_item_image_two"
+        android:layout_width="fill_parent"
+        android:layout_height="120dip"
+        android:layout_marginBottom="5dip"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="5dip"
+            android:layout_weight="1.0" >
+
+            <ImageView
+                android:id="@+id/image_item_image_two_image1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="10dip"
+                android:background="@drawable/background_discount_rectangle"
+                android:padding="2dip"
+                android:scaleType="fitXY" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="4dip"
+                android:layout_below="@+id/image_item_image_two_image1"
+                android:layout_marginTop="-11dip"
+                android:background="@drawable/image_shadow_lecture_summary" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5dip"
+            android:layout_weight="1.0" >
+
+            <ImageView
+                android:id="@+id/image_item_image_two_image2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="10dip"
+                android:background="@drawable/background_discount_rectangle"
+                android:padding="2dip"
+                android:scaleType="fitXY" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="4dip"
+                android:layout_below="@+id/image_item_image_two_image2"
+                android:layout_marginTop="-11dip"
+                android:background="@drawable/image_shadow_lecture_summary" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_item_image_one"
+        android:layout_width="fill_parent"
+        android:layout_height="200dip"
+        android:layout_marginBottom="5dip"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0" >
+
+            <ImageView
+                android:id="@+id/image_item_image_one_image1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="10dip"
+                android:background="@drawable/background_discount_rectangle"
+                android:padding="2dip"
+                android:scaleType="fitXY" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="4dip"
+                android:layout_below="@+id/image_item_image_one_image1"
+                android:layout_marginTop="-11dip"
+                android:background="@drawable/image_shadow_lecture_summary" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="@color/divider" />
+
+</LinearLayout>

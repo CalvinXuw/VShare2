@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true" >
+
+    <!-- 视频播放 -->
+
+    <com.ifeng.util.ui.CenterLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:orientation="vertical" >
+
+        <SurfaceView
+            android:id="@+id/videoplay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center" />
+    </com.ifeng.util.ui.CenterLayout>
+
+    <!-- 视频控制器 -->
+
+    <RelativeLayout
+        android:id="@+id/layout_media_control"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:id="@+id/layout_media_control_top"
+            android:layout_width="fill_parent"
+            android:layout_height="45dip"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/background_mediaplay_title"
+            android:gravity="center_vertical" >
+
+            <Button
+                android:id="@+id/btn_media_control_back"
+                android:layout_width="45dip"
+                android:layout_height="45dip"
+                android:background="@drawable/btn_mediaplay_back" />
+
+            <TextView
+                android:id="@+id/text_media_control_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="3dip"
+                android:singleLine="true"
+                android:textColor="@color/font_mediaplay_title"
+                android:textSize="@dimen/font_list_title" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_media_control_bottom"
+            android:layout_width="fill_parent"
+            android:layout_height="55dip"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/background_mediaplay_control"
+            android:gravity="center_vertical" >
+
+            <Button
+                android:id="@+id/btn_media_control_control"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:layout_margin="10dip"
+                android:background="@drawable/btn_mediaplay_pause" />
+
+            <SeekBar
+                android:id="@+id/seek_media_control_progress"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:maxHeight="32dip"
+                android:minHeight="32dip"
+                android:paddingLeft="5dip"
+                android:paddingRight="5dip"
+                android:progressDrawable="@drawable/seek_mediaplay_progressbar"
+                android:thumb="@drawable/seek_mediaplay_thumb"
+                android:thumbOffset="3.0dp" />
+
+            <TextView
+                android:id="@+id/text_media_control_time"
+                android:layout_width="200dip"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="5dip"
+                android:layout_marginLeft="-205dip"
+                android:layout_marginRight="5dip"
+                android:gravity="right|bottom"
+                android:textColor="@color/font_mediaplay_time"
+                android:textSize="@dimen/font_mediaplay_time" />
+
+            <LinearLayout
+                android:id="@+id/layout_media_volume"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_margin="5dip"
+                android:layout_weight="1"
+                android:gravity="center_vertical" >
+
+                <View
+                    android:layout_width="35dip"
+                    android:layout_height="35dip"
+                    android:background="@drawable/image_mediaplay_sound" />
+
+                <SeekBar
+                    android:id="@+id/seek_media_control_volume"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:maxHeight="32dip"
+                    android:minHeight="32dip"
+                    android:paddingLeft="5dip"
+                    android:paddingRight="5dip"
+                    android:progressDrawable="@drawable/seek_mediaplay_volumebar"
+                    android:thumb="@color/transparent"
+                    android:thumbOffset="3.0dp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_media_control_fullscreen"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:layout_margin="5dip"
+                android:background="@drawable/btn_mediaplay_full"
+                android:visibility="gone" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- 视频加载视图 -->
+
+    <LinearLayout
+        android:id="@+id/layout_media_loading"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/black"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:weightSum="3" >
+
+            <ImageView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:scaleType="centerInside"
+                android:src="@drawable/background_videoplay" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <ProgressBar
+                android:layout_width="19dip"
+                android:layout_height="19dip"
+                android:indeterminate="false"
+                android:indeterminateDrawable="@drawable/progress_listview" />
+
+            <TextView
+                android:id="@+id/text_media_loadingtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="25dip"
+                android:gravity="center"
+                android:padding="3dip"
+                android:singleLine="true"
+                android:textColor="@color/font_mediaplay_title"
+                android:textSize="15dip" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 视频重播视图 -->
+
+    <RelativeLayout
+        android:id="@+id/btn_media_replay"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/black"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:paddingBottom="25dip"
+            android:weightSum="3" >
+
+            <ImageView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:scaleType="centerInside"
+                android:src="@drawable/background_videoplay" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:weightSum="4" >
+
+            <ImageView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                android:src="@drawable/btn_videoplay_replay" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_listitem"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="10dip"
+        android:background="@drawable/background_discount_rectangle"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/layout_lecture_image"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/background_discount_rectangle"
+            android:padding="2dip" >
+
+            <ImageView
+                android:id="@+id/image_lecture"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/text_lecture_type"
+                android:layout_width="76dip"
+                android:layout_height="25dip"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:gravity="center"
+                android:paddingLeft="10dip"
+                android:textColor="@color/font_list_cover"
+                android:textSize="@dimen/font_list_subtitle" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="8dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/image_shadow_lecture_summary" />
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:fadingEdge="none"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/text_lecture_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip"
+                    android:textColor="@color/font_list_title"
+                    android:textSize="@dimen/font_list_title" />
+
+                <!-- 讲堂时间 -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dip"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="5dip"
+                    android:gravity="center_vertical" >
+
+                    <View
+                        android:layout_width="17dip"
+                        android:layout_height="17dip"
+                        android:layout_marginRight="10dip"
+                        android:background="@drawable/image_club_time" />
+
+                    <TextView
+                        android:id="@+id/text_lecture_time"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:textColor="@color/font_list_tag"
+                        android:textSize="@dimen/font_club_info_little" />
+                </LinearLayout>
+
+                <!-- 讲堂地点 -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dip"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:gravity="center_vertical" >
+
+                    <View
+                        android:layout_width="17dip"
+                        android:layout_height="17dip"
+                        android:layout_marginRight="10dip"
+                        android:background="@drawable/image_club_location" />
+
+                    <TextView
+                        android:id="@+id/text_lecture_location"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:textColor="@color/font_list_tag"
+                        android:textSize="@dimen/font_club_info_little" />
+                </LinearLayout>
+
+                <!-- divider -->
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@color/divider" />
+
+                <TextView
+                    android:id="@+id/text_lecture_summary"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dip"
+                    android:textColor="@color/font_list_desc"
+                    android:textSize="@dimen/font_list_subtitle" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

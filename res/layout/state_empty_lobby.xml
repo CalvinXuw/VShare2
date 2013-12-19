@@ -1,0 +1,57 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background_listitem_nor" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_listitem_nor"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:id="@+id/layout_headcontainer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="200dip"
+            android:padding="10dip" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:paddingBottom="70dip" >
+
+                <View
+                    android:layout_width="18dip"
+                    android:layout_height="18dip"
+                    android:background="@drawable/image_state_empty" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dip"
+                    android:text="@string/lobby_empty_hint"
+                    android:textColor="@color/font_list_tag"
+                    android:textSize="@dimen/font_list_subtitle" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_state_call"
+                android:layout_width="fill_parent"
+                android:layout_height="35dip"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/btn_blue"
+                android:text="@string/club_call_10086"
+                android:textColor="@color/font_list_cover"
+                android:textSize="@dimen/font_list_subtitle" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>

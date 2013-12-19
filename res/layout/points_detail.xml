@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- 添加一个处理页面状态的stateview -->
+
+    <include layout="@layout/include_stateview" />
+
+    <!-- 实际的滚动的页面详情 -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_fragment" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <!-- 顶部商品信息、图片及扣费 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dip" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/image_points_detail"
+                        android:layout_width="125dip"
+                        android:layout_height="125dip"
+                        android:background="@drawable/background_discount_rectangle"
+                        android:padding="2dip"
+                        android:scaleType="fitXY" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="6dip"
+                        android:background="@drawable/image_shadow_lecture_icon" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dip" >
+
+                    <TextView
+                        android:id="@+id/text_points_detail_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dip"
+                        android:textColor="@color/font_list_title"
+                        android:textSize="@dimen/font_list_title"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/text_points_detail_gotone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/font_list_desc"
+                            android:textSize="@dimen/font_list_subtitle" />
+
+                        <TextView
+                            android:id="@+id/text_points_detail_mzone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/text_points_detail_gotone"
+                            android:textColor="@color/font_list_desc"
+                            android:textSize="@dimen/font_list_subtitle" />
+
+                        <TextView
+                            android:id="@+id/text_points_detail_eastown"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/text_points_detail_mzone"
+                            android:textColor="@color/font_list_desc"
+                            android:textSize="@dimen/font_list_subtitle" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/text_points_detail_eastown"
+                            android:text="@string/exchange_hint"
+                            android:textColor="@color/font_point_hint"
+                            android:textSize="@dimen/font_points_exchangehint_little" />
+
+                        <Button
+                            android:id="@+id/btn_point_costmore"
+                            android:layout_width="37dip"
+                            android:layout_height="37dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_margin="5dip"
+                            android:background="@drawable/btn_point_costmore"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_points_exchange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-3dip"
+                android:paddingBottom="10dip"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:textColor="@color/font_list_tag"
+                android:textSize="@dimen/font_list_desc_little" />
+
+            <Button
+                android:id="@+id/btn_points_exchange"
+                android:layout_width="match_parent"
+                android:layout_height="35dip"
+                android:layout_margin="10dip"
+                android:background="@drawable/btn_blue"
+                android:text="@string/exchange_btn"
+                android:textColor="@color/font_list_cover"
+                android:textSize="@dimen/font_list_subtitle" />
+
+            <!-- 主要描述 -->
+
+            <LinearLayout
+                android:id="@+id/layout_points_hint_section"
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="5dip" >
+
+                <View
+                    android:layout_width="5dip"
+                    android:layout_height="20dip"
+                    android:background="@color/section_split" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dip"
+                    android:text="@string/exchange_tag"
+                    android:textColor="@color/font_point_hint"
+                    android:textSize="@dimen/font_list_subtitle"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="8dip"
+                    android:background="@color/section_split" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_points_hint"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:textColor="@color/font_list_desc"
+                android:textSize="@dimen/font_list_subtitle" />
+
+            <!-- 礼品描述 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="5dip" >
+
+                <View
+                    android:layout_width="5dip"
+                    android:layout_height="20dip"
+                    android:background="@color/section_split" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dip"
+                    android:text="@string/exchange_productdesc"
+                    android:textColor="@color/font_location_section"
+                    android:textSize="@dimen/font_list_subtitle"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="8dip"
+                    android:background="@color/section_split" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_points_desc"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:textColor="@color/font_list_desc"
+                android:textSize="@dimen/font_list_subtitle" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

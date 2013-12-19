@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- 嵌套一层ViewGroup，方可提供item的布局代码重算 -->
+
+    <LinearLayout
+        android:id="@+id/layout_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_listitem_nor"
+        android:orientation="horizontal" >
+
+        <!-- 左边item部分包含一张缩略图位置，以及一条新闻内容 -->
+
+        <LinearLayout
+            android:id="@+id/layout_item_news_left"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@drawable/background_listitem"
+            android:orientation="horizontal"
+            android:paddingLeft="10dip" >
+
+            <RelativeLayout
+                android:id="@+id/layout_item_news_image"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="10dip"
+                android:layout_weight="1" >
+
+                <ImageView
+                    android:id="@+id/image_item_news_image"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginTop="10dip"
+                    android:background="@drawable/background_discount_rectangle"
+                    android:padding="2dip"
+                    android:scaleType="fitXY" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="4dip"
+                    android:layout_below="@+id/image_item_news_image"
+                    android:layout_marginTop="-11dip"
+                    android:background="@drawable/image_shadow_lecture_summary" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="2"
+                android:paddingBottom="15dip"
+                android:paddingRight="10dip"
+                android:paddingTop="15dip" >
+
+                <TextView
+                    android:id="@+id/text_item_news_title_left"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:lines="2"
+                    android:textColor="@color/font_list_title"
+                    android:textSize="@dimen/font_list_title" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:id="@+id/text_item_news_time_left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/font_list_tag"
+                        android:textSize="@dimen/font_list_tag" />
+
+                    <TextView
+                        android:id="@+id/text_item_news_source_left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:paddingLeft="5dip"
+                        android:paddingRight="5dip"
+                        android:singleLine="true"
+                        android:textColor="@color/font_list_tag"
+                        android:textSize="@dimen/font_list_tag" />
+
+                    <ImageView
+                        android:id="@+id/image_item_news_type_left"
+                        android:layout_width="16dip"
+                        android:layout_height="12dip"
+                        android:layout_marginLeft="10dip"
+                        android:background="@drawable/image_topic_type_video" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!-- 右边item位置，包含纵向分割线以及一条新闻 -->
+
+        <LinearLayout
+            android:id="@+id/layout_item_news_right"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/background_listitem"
+            android:orientation="horizontal"
+            android:paddingRight="10dip" >
+
+            <View
+                android:layout_width="1dip"
+                android:layout_height="fill_parent"
+                android:background="@color/divider" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:paddingBottom="15dip"
+                android:paddingLeft="10dip"
+                android:paddingTop="15dip" >
+
+                <TextView
+                    android:id="@+id/text_item_news_title_right"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:lines="2"
+                    android:textColor="@color/font_list_title"
+                    android:textSize="@dimen/font_list_title" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:id="@+id/text_item_news_time_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/font_list_tag"
+                        android:textSize="@dimen/font_list_tag" />
+
+                    <TextView
+                        android:id="@+id/text_item_news_source_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:paddingLeft="5dip"
+                        android:paddingRight="5dip"
+                        android:singleLine="true"
+                        android:textColor="@color/font_list_tag"
+                        android:textSize="@dimen/font_list_tag" />
+
+                    <ImageView
+                        android:id="@+id/image_item_news_type_right"
+                        android:layout_width="16dip"
+                        android:layout_height="12dip"
+                        android:layout_marginLeft="10dip"
+                        android:background="@drawable/image_topic_type_video" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- item底部的divider -->
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:background="@color/divider" />
+
+</RelativeLayout>

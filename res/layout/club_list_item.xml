@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_listitem_nor"
+    android:orientation="vertical" >
+
+    <!-- 俱乐部图片 -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="5dip" >
+
+        <ImageView
+            android:id="@+id/image_item_club"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_discount_rectangle"
+            android:padding="2dip"
+            android:scaleType="fitXY" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="8dip"
+            android:layout_below="@+id/image_item_club"
+            android:background="@drawable/image_shadow_lecture_summary" />
+
+        <TextView
+            android:id="@+id/text_item_club_name"
+            android:layout_width="fill_parent"
+            android:layout_height="35dip"
+            android:layout_alignBottom="@+id/image_item_club"
+            android:layout_margin="2dip"
+            android:background="@drawable/background_head_title"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:singleLine="true"
+            android:textColor="@color/font_list_cover"
+            android:textSize="@dimen/font_list_title" />
+    </RelativeLayout>
+
+</LinearLayout>

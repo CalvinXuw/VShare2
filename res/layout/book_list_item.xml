@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_listitem_nor"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <!-- section样式 棕色 本地 -->
+
+        <LinearLayout
+            android:id="@+id/layout_item_book_section_local"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:layout_marginBottom="-15dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <View
+                android:layout_width="5dip"
+                android:layout_height="20dip"
+                android:background="@color/section_split" />
+
+            <TextView
+                android:id="@+id/text_item_location_section"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dip"
+                android:text="@string/section_book_local"
+                android:textColor="@color/font_location_section"
+                android:textSize="@dimen/font_list_title"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="8dip"
+                android:background="@color/section_split" />
+        </LinearLayout>
+
+        <!-- section样式 橙色 远端 -->
+
+        <LinearLayout
+            android:id="@+id/layout_item_book_section_remote"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:layout_marginBottom="-15dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <View
+                android:layout_width="5dip"
+                android:layout_height="20dip"
+                android:background="@color/section_split" />
+
+            <TextView
+                android:id="@+id/text_item_location_section"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dip"
+                android:text="@string/section_book_remote"
+                android:textColor="@color/font_books_section_remotebook"
+                android:textSize="@dimen/font_list_title"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="8dip"
+                android:background="@color/section_split" />
+        </LinearLayout>
+
+        <!-- item书籍 -->
+
+        <LinearLayout
+            android:id="@+id/layout_item"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:background="@drawable/background_listitem"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:weightSum="4" >
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="10dip"
+                android:layout_weight="1" >
+
+                <ImageView
+                    android:id="@+id/image_item_book"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginTop="10dip"
+                    android:background="@drawable/background_discount_rectangle"
+                    android:padding="2dip"
+                    android:scaleType="fitXY" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="4dip"
+                    android:layout_below="@+id/image_item_book"
+                    android:layout_marginTop="-11dip"
+                    android:background="@drawable/image_shadow_lecture_summary" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="3"
+                android:orientation="vertical"
+                android:paddingBottom="10dip"
+                android:paddingTop="10dip" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+
+                    <TextView
+                        android:id="@+id/text_item_book_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_toLeftOf="@+id/layout_item_book_action"
+                        android:gravity="center_vertical"
+                        android:lines="2"
+                        android:textColor="@color/font_list_title"
+                        android:textSize="@dimen/font_list_title"
+                        android:textStyle="bold" />
+
+                    <!-- 状态及操作group，下载、删除、进度等 -->
+
+                    <LinearLayout
+                        android:id="@+id/layout_item_book_action"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="15dip"
+                        android:gravity="center" >
+
+                        <ProgressBar
+                            android:id="@+id/progress_item_book"
+                            android:layout_width="19dip"
+                            android:layout_height="19dip"
+                            android:layout_margin="3dip"
+                            android:indeterminate="false"
+                            android:indeterminateDrawable="@drawable/progress_listview" />
+
+                        <TextView
+                            android:id="@+id/text_item_book_progress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dip"
+                            android:textColor="@color/font_list_tag"
+                            android:textSize="@dimen/font_list_tag" />
+
+                        <Button
+                            android:id="@+id/btn_item_book_retry"
+                            android:layout_width="25dip"
+                            android:layout_height="25dip"
+                            android:background="@drawable/btn_book_retry" />
+
+                        <Button
+                            android:id="@+id/btn_item_book_trash"
+                            android:layout_width="25dip"
+                            android:layout_height="25dip"
+                            android:background="@drawable/btn_book_trash" />
+
+                        <Button
+                            android:id="@+id/btn_item_book_download"
+                            android:layout_width="25dip"
+                            android:layout_height="25dip"
+                            android:background="@drawable/btn_book_download" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/text_item_book_author"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/font_list_title"
+                        android:textSize="@dimen/font_list_author" />
+
+                    <TextView
+                        android:id="@+id/text_item_book_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:lines="2"
+                        android:textColor="@color/font_list_desc"
+                        android:textSize="@dimen/font_list_subtitle" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider_booklist"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:background="@color/divider" />
+
+</RelativeLayout>

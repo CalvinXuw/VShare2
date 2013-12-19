@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_listitem"
+    android:orientation="vertical" >
+
+    <!-- 加一个状态view -->
+
+    <include layout="@layout/include_stateview" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- 俱乐部图片 -->
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="10dip" >
+
+                <ImageView
+                    android:id="@+id/image_club"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_discount_rectangle"
+                    android:padding="2dip"
+                    android:scaleType="fitXY" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="8dip"
+                    android:layout_below="@+id/image_club"
+                    android:background="@drawable/image_shadow_lecture_summary" />
+
+                <TextView
+                    android:id="@+id/text_club_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dip"
+                    android:layout_alignBottom="@+id/image_club"
+                    android:layout_margin="2dip"
+                    android:background="@drawable/background_head_title"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dip"
+                    android:singleLine="true"
+                    android:textColor="@color/font_list_cover"
+                    android:textSize="@dimen/font_list_title" />
+            </RelativeLayout>
+
+            <!-- 俱乐部时间 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:gravity="center_vertical" >
+
+                <View
+                    android:layout_width="17dip"
+                    android:layout_height="17dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@drawable/image_club_time" />
+
+                <TextView
+                    android:id="@+id/text_club_time"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/font_list_tag"
+                    android:textSize="@dimen/font_club_info_little" />
+            </LinearLayout>
+
+            <!-- 俱乐部地点 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:gravity="center_vertical" >
+
+                <View
+                    android:layout_width="17dip"
+                    android:layout_height="17dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@drawable/image_club_location" />
+
+                <TextView
+                    android:id="@+id/text_club_location"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/font_list_tag"
+                    android:textSize="@dimen/font_club_info_little" />
+            </LinearLayout>
+
+            <!-- 俱乐部介绍 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="5dip" >
+
+                <View
+                    android:layout_width="5dip"
+                    android:layout_height="20dip"
+                    android:background="@color/section_split" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dip"
+                    android:text="@string/section_club_introduce"
+                    android:textColor="@color/font_location_section"
+                    android:textSize="@dimen/font_list_subtitle"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="8dip"
+                    android:background="@color/section_split" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_club_introduce"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:textColor="@color/font_list_desc"
+                android:textSize="@dimen/font_list_subtitle" />
+
+            <!-- 服务对象 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="5dip" >
+
+                <View
+                    android:layout_width="5dip"
+                    android:layout_height="20dip"
+                    android:background="@color/section_split" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dip"
+                    android:text="@string/section_club_servicetarget"
+                    android:textColor="@color/font_location_section"
+                    android:textSize="@dimen/font_list_subtitle"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="8dip"
+                    android:background="@color/section_split" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_club_servicetarget"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:textColor="@color/font_list_desc"
+                android:textSize="@dimen/font_list_subtitle" />
+
+            <!-- 参与方式 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="5dip" >
+
+                <View
+                    android:layout_width="5dip"
+                    android:layout_height="20dip"
+                    android:background="@color/section_split" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dip"
+                    android:text="@string/section_club_participate"
+                    android:textColor="@color/font_location_section"
+                    android:textSize="@dimen/font_list_subtitle"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dip"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="8dip"
+                    android:background="@color/section_split" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_club_participate"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:textColor="@color/font_list_desc"
+                android:textSize="@dimen/font_list_subtitle" />
+
+            <!-- 往期图片 -->
+
+            <LinearLayout
+                android:id="@+id/layout_club_activity"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dip"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingTop="5dip" >
+
+                    <View
+                        android:layout_width="5dip"
+                        android:layout_height="20dip"
+                        android:background="@color/section_split" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="5dip"
+                        android:text="@string/section_club_photos"
+                        android:textColor="@color/font_location_section"
+                        android:textSize="@dimen/font_list_subtitle"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="2dip"
+                        android:layout_marginLeft="5dip"
+                        android:layout_marginRight="10dip"
+                        android:layout_marginTop="8dip"
+                        android:background="@color/section_split" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:weightSum="3" >
+
+                    <RelativeLayout
+                        android:layout_width="0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="5dip"
+                        android:layout_weight="1.0" >
+
+                        <ImageView
+                            android:id="@+id/image_club_activity_left"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_marginBottom="10dip"
+                            android:background="@drawable/background_discount_rectangle"
+                            android:padding="2dip"
+                            android:scaleType="fitXY" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="4dip"
+                            android:layout_below="@+id/image_club_activity_left"
+                            android:layout_marginTop="-11dip"
+                            android:background="@drawable/image_shadow_lecture_summary" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="5dip"
+                        android:layout_marginRight="5dip"
+                        android:layout_weight="1.0" >
+
+                        <ImageView
+                            android:id="@+id/image_club_activity_middle"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_marginBottom="10dip"
+                            android:background="@drawable/background_discount_rectangle"
+                            android:padding="2dip"
+                            android:scaleType="fitXY" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="4dip"
+                            android:layout_below="@+id/image_club_activity_middle"
+                            android:layout_marginTop="-11dip"
+                            android:background="@drawable/image_shadow_lecture_summary" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="5dip"
+                        android:layout_weight="1.0" >
+
+                        <ImageView
+                            android:id="@+id/image_club_activity_right"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_marginBottom="10dip"
+                            android:background="@drawable/background_discount_rectangle"
+                            android:padding="2dip"
+                            android:scaleType="fitXY" />
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="4dip"
+                            android:layout_below="@+id/image_club_activity_right"
+                            android:layout_marginTop="-11dip"
+                            android:background="@drawable/image_shadow_lecture_summary" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

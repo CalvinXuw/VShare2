@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_listitem"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dip" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/text_item_lobby_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/text_item_lobby_distance"
+                android:textColor="@color/font_list_title"
+                android:textSize="@dimen/font_list_title" />
+
+            <TextView
+                android:id="@+id/text_item_lobby_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="2dip"
+                android:paddingLeft="5dip"
+                android:textColor="@color/font_list_location"
+                android:textSize="@dimen/font_list_location" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/text_item_lobby_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dip"
+            android:layout_marginTop="4dip"
+            android:textColor="@color/font_list_desc"
+            android:textSize="@dimen/font_list_tag" />
+
+        <TextView
+            android:id="@+id/text_item_lobby_tel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dip"
+            android:textColor="@color/font_list_desc"
+            android:textSize="@dimen/font_list_tag" />
+
+        <TextView
+            android:id="@+id/text_item_lobby_addr"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/font_list_desc"
+            android:textSize="@dimen/font_list_tag" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:background="@color/divider" />
+
+</LinearLayout>

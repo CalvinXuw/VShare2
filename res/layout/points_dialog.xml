@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="245dip"
+    android:layout_height="wrap_content"
+    android:background="@color/background_listitem_nor"
+    android:orientation="vertical"
+    android:padding="20dip" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dip"
+        android:text="@string/dialog_title_point"
+        android:textColor="@color/font_list_title"
+        android:textSize="@dimen/font_list_title"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/text_dialog_points_diamond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dip"
+        android:singleLine="true"
+        android:text="@string/gotone_diamond_cost"
+        android:textColor="#005ca2"
+        android:textSize="@dimen/font_list_subtitle"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/text_dialog_points_gold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dip"
+        android:singleLine="true"
+        android:text="@string/gotone_gold_cost"
+        android:textColor="#005ca2"
+        android:textSize="@dimen/font_list_subtitle"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/text_dialog_points_sliver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dip"
+        android:singleLine="true"
+        android:text="@string/gotone_sliver_cost"
+        android:textColor="#005ca2"
+        android:textSize="@dimen/font_list_subtitle"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_dialog_points_close"
+        android:layout_width="180dip"
+        android:layout_height="35dip"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/btn_blue"
+        android:text="@string/close"
+        android:textColor="@color/font_list_cover"
+        android:textSize="@dimen/font_list_subtitle" />
+
+</LinearLayout>

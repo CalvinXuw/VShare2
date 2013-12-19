@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 嵌套一层ViewGroup，方可提供item的布局代码重算 -->
+
+    <LinearLayout
+        android:id="@+id/layout_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_listitem"
+        android:orientation="horizontal"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip" >
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="10dip"
+            android:layout_weight="4" >
+
+            <ImageView
+                android:id="@+id/image_item_video"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="10dip"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/background_discount_rectangle"
+                android:padding="2dip"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/btn_item_video"
+                android:layout_width="36dip"
+                android:layout_height="36dip"
+                android:layout_centerInParent="true"
+                android:background="@drawable/btn_videolist_play" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="5dip"
+                android:layout_below="@+id/image_item_video"
+                android:layout_marginTop="-11dip"
+                android:background="@drawable/image_shadow_videolist" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="9"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/text_item_video_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/text_item_video_topic"
+                    android:singleLine="true"
+                    android:textColor="@color/font_list_title"
+                    android:textSize="@dimen/font_list_title"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text_item_video_topic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dip"
+                    android:background="@color/background_source_tips_topic"
+                    android:paddingLeft="5dip"
+                    android:paddingRight="5dip"
+                    android:singleLine="true"
+                    android:text="@string/title_topic"
+                    android:textColor="@color/font_source_tips_topic"
+                    android:visibility="gone" >
+                </TextView>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/text_item_video_desc"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dip"
+                android:lines="2"
+                android:textColor="@color/font_list_desc"
+                android:textSize="@dimen/font_list_desc_little" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:gravity="center_vertical" >
+
+                <View
+                    android:layout_width="15dip"
+                    android:layout_height="15dip"
+                    android:layout_marginRight="5dip"
+                    android:background="@drawable/image_videolist_time" />
+
+                <TextView
+                    android:id="@+id/text_item_video_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/font_list_tag"
+                    android:textSize="@dimen/font_list_desc_little" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:background="@color/divider" />
+
+</LinearLayout>

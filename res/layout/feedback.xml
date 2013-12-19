@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background_listitem_nor"
+    android:orientation="vertical"
+    android:padding="15dip" >
+
+    <EditText
+        android:id="@+id/edit_feedback_content"
+        android:layout_width="fill_parent"
+        android:layout_height="150dip"
+        android:background="@drawable/background_discount_rectangle"
+        android:gravity="top|left"
+        android:hint="@string/feedback_hint_content"
+        android:padding="10dip"
+        android:textColor="@color/font_list_desc"
+        android:textSize="@dimen/font_list_subtitle" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dip"
+        android:layout_marginTop="10dip"
+        android:text="@string/feedback_contact"
+        android:textColor="@color/font_list_title"
+        android:textSize="@dimen/font_list_title" />
+
+    <EditText
+        android:id="@+id/edit_feedback_contact"
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:background="@drawable/background_discount_rectangle"
+        android:gravity="center_vertical|left"
+        android:hint="@string/feedback_hint_contact"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:singleLine="true"
+        android:textColor="@color/font_list_desc"
+        android:textSize="@dimen/font_list_subtitle" />
+
+    <Button
+        android:id="@+id/btn_feedback_handup"
+        android:layout_width="match_parent"
+        android:layout_height="35dip"
+        android:layout_marginTop="20dip"
+        android:background="@drawable/btn_blue"
+        android:text="@string/feedback_handup"
+        android:textColor="@color/font_list_cover"
+        android:textSize="@dimen/font_list_subtitle" />
+
+</LinearLayout>

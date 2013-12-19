@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background_photodetail"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <com.ifeng.util.ui.IFViewPager
+        android:id="@+id/pager_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="48dip"
+        android:background="@color/background_state_dark" />
+
+    <LinearLayout
+        android:id="@+id/layout_photo_message"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/background_photo_message"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/text_photo_detail_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/text_photo_detail_index"
+                android:padding="5dip"
+                android:textColor="@color/font_photo_detail_title"
+                android:textSize="@dimen/font_list_title"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_photo_detail_index"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:padding="5dip"
+                android:textColor="@color/font_photo_detail_title"
+                android:textSize="@dimen/font_list_subtitle" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/text_photo_detail_message"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dip"
+            android:paddingLeft="5dip"
+            android:paddingRight="5dip"
+            android:scrollbars="none"
+            android:textColor="@color/font_photo_detail_message"
+            android:textSize="@dimen/font_list_subtitle" />
+    </LinearLayout>
+
+</RelativeLayout>

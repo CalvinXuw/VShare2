@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ifeng.vshare"
+    android:versionCode="30"
+    android:versionName="V1.0.1" >
+
+    <uses-sdk
+        android:minSdkVersion="7"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CALL_PHONE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <permission android:name="android.permission.BAIDU_LOCATION_SERVICE" >
+    </permission>
+
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCES_MOCK_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:name="com.ifeng.vshare.VShareApplication"
+        android:allowBackup="false"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar" >
+        <meta-data
+            android:name="channelId"
+            android:value="1" />
+
+        <!-- 欢迎页 -->
+        <activity
+            android:name="com.ifeng.vshare.activity.SplashActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 主页 -->
+        <activity
+            android:name="com.ifeng.vshare.activity.VShareMainActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ifeng.vshare.activity.SettingActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ifeng.vshare.activity.AboutActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ifeng.vshare.activity.FeedbackActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 城市选取 -->
+        <activity
+            android:name="com.ifeng.vshare.activity.LocationActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 资讯 -->
+        <activity
+            android:name="com.ifeng.vshare.activity.HeadlineCategoryActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ifeng.vshare.activity.NewsTopicActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ifeng.vshare.activity.NewsDetailActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="com.ifeng.vshare.activity.NewsDetailPhotoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ifeng.vshare.activity.BookDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ifeng.vshare.activity.BookReadActivity"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 视频 -->
+        <activity
+            android:name="com.ifeng.vshare.activity.VideoCategoryActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ifeng.vshare.activity.VideoTopicActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ifeng.vshare.activity.VideoPlayActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
+            android:screenOrientation="landscape" >
+        </activity>
+
+        <!-- 大讲堂 -->
+        <activity
+            android:name="com.ifeng.vshare.activity.LectureCategoryActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ifeng.vshare.activity.LectureDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ifeng.vshare.activity.LecturePhotoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ifeng.vshare.activity.LectureCommentActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="com.ifeng.vshare.activity.LectureVideoActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" >
+        </activity>
+
+        <!-- 图片 -->
+        <activity
+            android:name="com.ifeng.vshare.activity.PhotoDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 积分商城 -->
+        <activity
+            android:name="com.ifeng.vshare.activity.PointsCategoryActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ifeng.vshare.activity.PointsDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 俱乐部 -->
+        <activity
+            android:name="com.ifeng.vshare.activity.ClubCategoryActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ifeng.vshare.activity.ServiceActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ifeng.vshare.activity.LobbyActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ifeng.vshare.activity.ClubDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ifeng.vshare.activity.ClubDetailPhotoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 商盟特惠 -->
+        <activity
+            android:name="com.ifeng.vshare.activity.DiscountCategoryActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.ifeng.vshare.activity.DiscountDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 下载服务数据库 -->
+        <provider
+            android:name="com.ifeng.util.download.DownloadProvider"
+            android:authorities="com.ifeng.vshare.downloads" >
+        </provider>
+
+        <!-- 下载服务 -->
+        <service android:name="com.ifeng.util.download.DownloadService" />
+
+        <!-- 下载服务及相关系统广播监听 -->
+        <receiver
+            android:name="com.ifeng.util.download.DownloadReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <!--
+  对于漫游网络状态下，下载服务的限流设置activity
+  Activity to show dialogs to the user when a download exceeds a limit on
+  download sizes for mobile networks
+        -->
+        <activity
+            android:name="com.ifeng.util.downloads.SizeLimitActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|screenLayout"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent" >
+        </activity>
+
+        <!-- 书籍数据库 -->
+        <provider
+            android:name="com.ifeng.vshare.database.BooksProvider"
+            android:authorities="com.ifeng.vshare.books" >
+        </provider>
+
+        <!-- 讲堂数据库 -->
+        <provider
+            android:name="com.ifeng.vshare.database.LectureProvider"
+            android:authorities="com.ifeng.vshare.lecture" >
+        </provider>
+
+        <!-- 百度定位服务 -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+        </service>
+
+        <!-- Receiver Push -->
+        <receiver
+            android:name="com.ifeng.vshare.push.PushReceiver"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+
+                <!-- 开机启动事件 -->
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <!-- 通知到达事件 -->
+                <action android:name="com.ifeng.ipush.intent.NOTIFICATION_RECEIVED" />
+                <!-- 通知打开事件 -->
+                <action android:name="com.ifeng.ipush.intent.NOTIFICATION_OPENED" />
+                <!-- 消息到达事件 -->
+                <action android:name="com.ifeng.ipush.intent.ACTION_MESSAGE_RECEIVED" />
+                <!-- 应用包名 -->
+                <category android:name="com.ifeng.vshare" />
+            </intent-filter>
+        </receiver>
+
+        <!-- iPush_Core -->
+        <service
+            android:name="com.ifeng.ipush.client.service.PushService"
+            android:enabled="true"
+            android:exported="false" >
+        </service>
+        <service
+            android:name="com.ifeng.ipush.client.service.EventService"
+            android:enabled="true"
+            android:exported="false" >
+        </service>
+
+        <receiver
+            android:name="com.ifeng.ipush.client.receiver.PushReceiver"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
